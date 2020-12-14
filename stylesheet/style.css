@@ -6,6 +6,7 @@ html{
     color: #17252a;
     background-color:#3aafa9;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
 }
 
 #main-content{

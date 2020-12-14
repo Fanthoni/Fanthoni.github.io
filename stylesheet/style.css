@@ -230,6 +230,7 @@ h1{
     #profile-picture{
         position: relative;
         margin-left: 0;
+        top: 0%;
         transform: translate(0, 0);
     }
 

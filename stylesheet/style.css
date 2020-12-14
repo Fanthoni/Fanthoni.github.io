@@ -211,6 +211,9 @@ h1{
 
 @media screen and (max-width: 600px){
     /* phones */
+    #content{
+        top: 10%;
+    }
     #menu-list ul{
         display: none;
     }

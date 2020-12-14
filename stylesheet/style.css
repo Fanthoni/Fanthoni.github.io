@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap');
+
+html{
+    color: #17252a;
+    background-color:#3aafa9;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#main-content{
+    background-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 10px 0 0 0 ;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+#logo{
+    font-size: 2rem;
+    float: left;
+    margin-top: 0.2rem;
+    margin-left: 0.5rem;
+    font-family: 'Yatra One', cursive;
+    
+}
+
+#menu-list ul{
+    float: right;
+    margin-right: 0.5rem;
+}
+
+#menu-list li{
+    list-style: none;
+    display: inline;
+    padding-right: 1.2rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+#content{
+    position: absolute;
+    top: 15%;
+}
+
+.section{
+    margin: 5vw 5vw 5vw 5vw;
+}
+
+.section-title{
+    font-size: 2rem;
+    text-decoration-line:overline;
+    text-decoration-color: #3aafa9b6;
+    -moz-text-decoration-color: #3aafa9;
+    /* text-underline-offset: -2px; */
+}
+
+#banner{
+    width: 75vw;
+    margin-bottom: 7vw;
+}
+
+h1{
+    font-size: 3rem;
+    margin: 0;
+}
+
+#greetings{
+    color: #000000;
+    font-weight: 900;
+}
+
+#name{
+    margin-top: 1rem;
+}
+
+#title-desc{
+    color: #d9dee0;
+    padding-bottom: 0.5em;
+    font-size: 2rem;
+}
+
+.bio p{
+    font-size: 0.9rem;
+}
+
+#connect-btn{
+    background-color: #d9dee0;
+    color: black;
+    font-weight: 900;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    padding: 18x 22px;
+    font-size: 0.8rem;
+    font-family: 'Roboto Slab', serif;
+}
+
+#about{
+    display: grid;
+    grid-template-columns: 45% 50%;
+    grid-template-rows: auto;
+}
+
+#profile-wrapper{
+    position: relative;
+}
+
+#profile-picture{
+    position: absolute;
+    margin-left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 12rem;
+    border-radius: 10px;
+}
+
+.project{
+    display: grid;
+    grid-template-columns: 50% 45%;
+    grid-template-rows: auto;
+    padding-bottom: 2rem;
+}
+
+#projects img{
+    width: 20rem;
+}
+
+#projects h3{
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+#projects p{
+    font-size: 0.9rem;
+}
+
+.project-link li{
+    list-style: none;
+    display: inline;
+    margin-right: 0.3rem;
+}
+
+
+#gallery{
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: 15vw 15vw 15vw 15vw 15vw ;
+    grid-template-rows: auto;
+}
+
+.gallery-list{
+    margin-right: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.gallery-list h4{
+    text-align: center;
+}
+
+.gallery-list img{
+    width: 64px;
+    height: 64px;
+    display: block;
+    margin: 0 auto;
+}
+
+#contact ul, .project-link ul{
+    padding: 0;
+}
+
+#contact li{
+    list-style: none;
+    display: inline;
+    padding-right: 0.8rem;
+}
+
+.fab, .fas{
+    color: rgba(0, 0, 0, 0.712);
+}
+
+.icon i{
+    font-size: 2.5rem;
+}
+
+@media screen and (max-width: 999px){
+    /* small laptop */
+    .section{
+        margin: 5vw 0vw 0vw 2vw;
+    }
+
+    #gallery{
+        grid-template-columns: 22vw 22vw 22vw 22vw;
+    }
+}
+
+@media screen and (max-width: 728px){
+    /* tablet */
+    .project{
+        grid-template-columns: 80vw;
+    }
+
+    .project-desc{
+        margin: 3vw 0vw 0vw 0vw;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    /* phones */
+    #menu-list ul{
+        display: none;
+    }
+
+    #gallery{
+        grid-template-columns: 30vw 30vw 30vw;
+    }
+
+    #banner{
+        width: 90vw;
+    }
+
+    #about{
+        grid-template-columns: 80vw;
+    }
+
+    #profile-picture{
+        position: relative;
+        margin-left: 0;
+        transform: translate(0, 0);
+    }
+}
+

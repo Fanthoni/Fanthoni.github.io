@@ -1,12 +1,6 @@
 $(document).ready(function(){
-    // console.log("I'm ready");
-    // $(window).scroll(function(){
-    //     if ($(this).scrollTop() > 1){
-    //         $("#banner").css({"opacity" : "0"});
-    //     } else{
-    //         $("#banner").css({"opacity" : "1"});
-    //     }
-    // });
+    console.log($(this).width());
+    
 
     var documentEl = $(document);
     var fadeElem = $(".section");
@@ -17,7 +11,7 @@ $(document).ready(function(){
         fadeElem.each(function(){
             var $this = $(this);
             var elemOffsetTop = $this.offset().top;
-            if(currScrollPos > elemOffsetTop){
+            if($(document).width() >= 740 && currScrollPos > elemOffsetTop){
                 $this.css('opacity', 1-(currScrollPos-elemOffsetTop)/400);
             }
         });

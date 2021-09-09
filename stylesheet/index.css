@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family:Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+html{
+    background-color: #F9DACD;
+}
+
+body {
+    margin: 0 16px;
+}
+
+#navbar {
+    width: 100%;
+    height: 3rem;
+    margin: 1.5rem 0;
+    color: #FFFFFF;
+}
+
+#logo {
+    display: inline;
+    margin: 0 1rem;
+    font-size: 2rem;
+    font-family: 'Yatra One', cursive;
+}
+
+#menu-list {
+    margin: 0.5rem;
+    float: right;
+}
+
+#menu-list a:hover  {
+    background-size: 100% 0.3em;
+}
+
+#menu-list a {
+    font-size: 18px;
+    margin: 0 1rem;
+    color: #FFFFFF;
+    text-decoration: none;
+    background-image: linear-gradient(rgba(79, 168, 218, 1), rgba(150, 240, 240, 0.5));
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 88%;
+    transition: 0.25s ease-in-out;
+}
+
+.page {
+    margin-bottom: 10rem;
+}
+
+#landing-page {
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+#landing-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.highlight {
+    display: inline-block;
+    background-image: linear-gradient(rgb(197 210 218 / 97%), rgb(187 211 226 / 34%));
+    background-repeat: no-repeat;
+    background-size: 100% 0.3em;
+    background-position: 0 88%;
+}
+
+.blue-text {
+    color: #4FA8DA;
+    font-weight: bold;
+}
+
+.section-title {
+    font-size: 3.5rem;
+    margin: 0;
+}
+
+#about-page {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+}
+
+#profile-picture {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+#about-text-container {
+    width: 80%;
+}
+
+#project-title {
+    margin-bottom: 3rem;
+}
+
+#projects-page {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.collapsible {
+    background-color: rgba(255, 253, 253, 0);
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.5rem;
+}
+
+.fa-github {
+    color: #574949bd;
+    cursor: pointer;   
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f100;
+}
+
+.active, .collapsible:hover {
+    background-color: #4fa7da42;
+    transition: 0.75s ease-in-out;
+}
+
+.collapsible:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+  }
+  
+.active:after {
+content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.project-gallery {
+    text-align: center;
+}
+
+.metrOne-capture {
+    width: 150px
+}
+
+#lizzy-project-gallery > img, #disconvo-project-gallery > img {
+    max-width: 1000px;
+    width: 100%;
+}
+
+#contact-wrapper {
+    text-align: center;
+}
+
+.contact-icon {
+    width: 30px;
+    padding-left: 5px;
+}
+
+#footer {
+    text-align: center;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        margin: 0 32px;
+    }
+
+    #navbar {
+        display: grid;
+    }
+
+    #logo, #menu-list {
+        text-align: center;
+    }
+
+    #menu-list > a {
+        margin: auto 0.3rem;
+    }
+
+    #landing-page {
+        margin-top: 7rem;
+    }
+
+    #about-page {
+        grid-template-columns: 100vw;
+    }
+
+    #profile-picture-container {
+        display: none;
+    }
+    
+    #projects-page {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

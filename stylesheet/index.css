@@ -88,7 +88,7 @@ body {
 
 #about-page {
     display: grid;
-    grid-template-columns: 50vw 50vw;
+    grid-template-columns: 50% 50%;
 }
 
 #profile-picture {
@@ -105,7 +105,7 @@ body {
     margin-bottom: 3rem;
 }
 
-#projects-page {
+#projects-page, #about-page{
     margin-left: 5rem;
     margin-right: 5rem;
 }
@@ -214,7 +214,7 @@ content: "\2796"; /* Unicode character for "minus" sign (-) */
         display: none;
     }
     
-    #projects-page {
+    #projects-page, #about-page {
         margin-left: 0;
         margin-right: 0;
     }

@@ -102,10 +102,18 @@ h1, h2, h3, h4, h5, h6 {
 #about-page {
     display: grid;
     grid-template-columns: 50% 50%;
+    max-width: 1500px;
+}
+
+@media screen and (min-width: 1700px) {
+    #about-page {
+        margin-left: 50%;
+        transform: translate(-50%, 0);
+    }
 }
 
 #profile-picture {
-    width: 250px;
+    width: 350px;
     display: block;
     margin: 0 auto;
 }
@@ -115,35 +123,67 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* The Project Page Title */
-#project-title {
+#filter-container {
+    margin-top: 1rem;
     margin-bottom: 3rem;
 }
 
-#projects-page, #about-page{
+#projects-page {
     margin-left: 5rem;
     margin-right: 5rem;
+    max-width: 1250px;
 }
+
+@media screen and (min-width: 2500px) {
+    #projects-page {
+        margin-left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
+
+.btn-primary:focus,
+.filter-btn {
+    background-color: transparent;
+    color: black;
+    border-color: #4FA8DA;
+    border-radius: 25px;
+    box-shadow: none;
+}
+
+.filter-btn:hover {
+    background-color: #4FA8DA;
+    color: white;
+}
+
+.btn-primary.active:focus,
+.btn-primary.active {
+    background-color: #4FA8DA;
+    color: white;
+    box-shadow: none;
+}     
 
 #project-cards-wrapper {
     column-count: 4;
 }
 
-
-@media screen and (max-width: 1750px) {
+@media screen and (max-width: 1300px) {
     #project-cards-wrapper {
         column-count: 3;
     }
 }
 
-@media screen and (max-width: 1385px) {
+@media screen and (max-width: 1100px) {
     #project-cards-wrapper {
         column-count: 2;
     }
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 600px) {
     #project-cards-wrapper {
         column-count: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -152,8 +192,12 @@ h1, h2, h3, h4, h5, h6 {
     break-inside: avoid;
     flex-direction: column;
     margin-bottom: 20px;
-    width: 25rem;
+    width: 17rem;
     background-color: rgba(255, 255, 255, 0.7);
+}
+
+.project-card-inactive {
+    display: none;
 }
 
 /*Project Title in each card*/

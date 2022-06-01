@@ -39,7 +39,7 @@
     </div>
     <div class="page" id="about-page">
         <div class="container-custom" id="profile-picture-container">
-            <img src="asset/profile.png" id="profile-picture" alt="Profile Picture" onmouseover="onProfileHover(this)", onmouseleave="onProfleLeave(this)"/>
+            <img src="asset/profile2.png" id="profile-picture" alt="Profile Picture"/>
         </div>
         <div class="container-custom" id="about-text-container">
             <h1 class="highlight section-title">about</h1>
@@ -64,13 +64,18 @@
         <!-- Contain the about me -->
     </div>
     <div class="page" id="projects-page">
-        <h1 class="highlight section-title" id="project-title">projects</h1>
+        <h1 class="highlight section-title" >projects . experience</h1>
+        <div id="filter-container">
+            <button type="button" class="btn btn-primary filter-btn" id="project-filter-button" onclick=handleFilter(this)>project</button>
+            <button type="button" class="btn btn-primary filter-btn" id="experience-filter-button" onclick=handleFilter(this)>experience</button>
+        </div>
+
         <!-- Contains list of project with expandable and collapsable view -->
         <div id="project-cards-wrapper">
 
             <!-- TODO: Change the button forwarding-->
             <!-- MetrOne-->
-            <div class="card project-card" id="metrone">
+            <div class="card project-card project" id="metrone">
                 <img class="project-photo" src="asset/metrone.png" alt="MetrOne">
                 <div class="card-body">
                     <h5 class="card-title">MetrOne</h5>
@@ -82,12 +87,11 @@
                     </div>
                     <p class="card-text">A web app that book store mall reservations
                         and skips the line.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
 
             <!-- Lizzy -->
-            <div class="card project-card" id="lizzy">
+            <div class="card project-card project" id="lizzy">
                 <img class="project-photo" src="asset/lizzy.png" alt="Lizzy">
                 <div class="card-body">
                     <h5 class="card-title">Lizzy</h5>
@@ -97,12 +101,11 @@
                     </div>
                     <p class="card-text">A discord bot that manages your server's list. Create, edit
                     and delete list/items together with your friends!</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
 
             <!-- Abalone-->
-            <div class="card project-card" id="abalone">
+            <div class="card project-card project" id="abalone">
                 <img class="project-photo" src="asset/abalone.png" alt="Abalone">
                 <div class="card-body">
                     <h5 class="card-title">Abalone</h5>
@@ -111,27 +114,26 @@
                     </div>
                     <p class="card-text">An Abalone game to play with your friend or a
                     AI-based bot opponent.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
 
             <!-- Fin-->
-            <div class="card project-card" id="fin">
+            <div class="card project-card project" id="fin">
                 <img class="project-photo" src="asset/fin.png" alt="Fin">
                 <div class="card-body">
                     <h5 class="card-title">Fin</h5>
                     <div class="project-framework-list">
+                        <img src="asset/icons/java.png" alt="Java">
                         <img src="asset/icons/android.svg" alt="Android">
                         <img src="asset/icons/firebase.svg" alt="Firebase">
                     </div>
                     <p class="card-text">A financial app that keep tracks of your asset -
                     savings account, crypto, and stocks in one place.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
 
             <!-- Portfolio Website -->
-            <div class="card project-card" id="portfolio-website">
+            <div class="card project-card project" id="portfolio-website">
                 <div class="card-body">
                     <h5 class="card-title">Portfolio Website</h5>
                     <div class="project-framework-list">
@@ -140,13 +142,14 @@
                         <img src="asset/icons/javascript.svg" alt="JavaScript">
                     </div>
                     <p class="card-text">What you are seeing at the moment :)</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
 
-            <div class="card project-card" id="trulioo">
+            <!-- Trulioo -->
+            <div class="card project-card experience" id="trulioo">
                 <div class="card-body">
                     <h5 class="card-title">Trulioo</h5>
+                    <h6>Software Developer in Test & QA Engineer</h6>
                     <p class="card-text">2021 - Coop Education</p>
                     <div class="project-framework-list">
                         <img src="asset/icons/react.svg" alt="React">
@@ -157,7 +160,25 @@
                     <p class="card-text">Wrote automation test script using C#</p>
                     <p class="card-text">Worked on a react-based data-creation tool
                     to speed up testing process.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+
+            <!-- Trulioo -->
+            <div class="card project-card experience" id="mlc">
+                <img class="project-photo" src="asset/mlc.png" alt="Fin">
+                <div class="card-body">
+                    <h5 class="card-title">My Living City</h5>
+                    <h6>Full-Stack Developer</h6>
+                    <p class="card-text">2022 - Practicum Education</p>
+                    <div class="project-framework-list">
+                        <img src="asset/icons/react.svg" alt="React">
+                        <img src="asset/icons/typescript.svg" alt="TypeScript">
+                        <img src="asset/icons/nodejs.svg" alt="NodeJS">
+                        <img src="asset/icons/postgre.png" alt="Postgre">
+                    </div>
+                    <p class="card-text">Implemented different set of features such as user
+                        signup, post filtering, and follow/unfollow post
+                    </p>
                 </div>
             </div>
         </div>
@@ -182,5 +203,5 @@
     </script>
     <script src="./js/responsive-background.js"></script>
     <script src="./js/copyright.js"></script>
-    <script src="./js/collapsible.js"></script>
+    <script src="./js/filter.js"></script>
 </body>

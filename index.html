@@ -6,6 +6,8 @@
     <title>Ferrel Anthoni</title>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/26da0e4274.js" crossorigin="anonymous"></script>
 
@@ -13,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="./stylesheet/index.css">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/png" href="./asset/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="asset/icons/favicon.png" />
 </head>
 
 <body>
@@ -29,17 +31,17 @@
     <div class="page" id="landing-page">
         <img src="./asset/background.jpg" id="landing-background">
         <!-- Contains Navbar, background image and introduction -->
-        <h1 id="landing-greeting" style="font-size: 5rem;">Hello</h1>
+        <h1 id="landing-greeting" style="font-size: 5rem; margin-bottom: 3rem;">Hello</h1>
         <h2 id="landing-name" style="margin-bottom: 0; font-size: 3rem">i'm Ferrel</h2>
         <h5 id="landing-welcome" style="margin: 0 0;">let me take you to my tech journey</h5>
         <h5 style="margin: 0 0;">. . .</h5>
 
     </div>
     <div class="page" id="about-page">
-        <div class="container" id="profile-picture-container">
-            <img src="asset/profile.png" id="profile-picture" alt="Profile Picture" />
+        <div class="container-custom" id="profile-picture-container">
+            <img src="asset/profile2.png" id="profile-picture" alt="Profile Picture"/>
         </div>
-        <div class="container" id="about-text-container">
+        <div class="container-custom" id="about-text-container">
             <h1 class="highlight section-title">about</h1>
             <p>
                 Halo! My name is <span class="blue-text">Ferrel Anthoni</span>.
@@ -62,88 +64,144 @@
         <!-- Contain the about me -->
     </div>
     <div class="page" id="projects-page">
-        <h1 class="highlight section-title" id="project-title">projects</h1>
-        <!-- Contains list of project with expandable and collapsable view -->
+        <h1 class="highlight section-title" >projects . experience</h1>
+        <div id="filter-container">
+            <button type="button" class="btn btn-primary filter-btn" id="project-filter-button" onclick=handleFilter(this)>project</button>
+            <button type="button" class="btn btn-primary filter-btn" id="experience-filter-button" onclick=handleFilter(this)>experience</button>
+        </div>
 
-        <!-- MetrOne -->
-        <button type="button" class="collapsible">
-            MetrOne
-            <a class="github-project-link" href="https://github.com/Fanthoni/metroOne_webapp" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-        </button>
-        <div class="content">
-            <p>MetrOne is a simple mobile web application that allows user to reserve their
-                time when they visit to a specific store in a mall. It was completed in a
-                team of 4 over the course of 5 weeks during our first semester at BCIT.
-                We utilizes HTML, CSS, Bootstrap, and Javascript for the front-end, and
-                Firebase as our databse. We also emphasizes collaboration tools using Github,
-                Agile, and Sprints.
-            </p>
-            <div class="project-gallery" id="metrOne-project-gallery">
-                <img class="metrOne-capture" src="./asset/metrOne-login.png" alt="metrOne login page" />
-                <img class="metrOne-capture" src="./asset/metrOne-landing.png" alt="metrOne landing page" />
-                <img class="metrOne-capture" src="./asset/metrOne-store.png" alt="metrOne store page" />
+        <!-- Contains list of project with expandable and collapsable view -->
+        <div id="project-cards-wrapper">
+
+            <!-- TODO: Change the button forwarding-->
+            <!-- MetrOne-->
+            <div class="card project-card project" id="metrone">
+                <img class="project-photo" src="asset/metrone.png" alt="MetrOne">
+                <div class="card-body">
+                    <h5 class="card-title">MetrOne</h5>
+                    <div class="project-framework-list">
+                        <img src="asset/icons/html5_logo.svg" alt="HTML5">
+                        <img src="asset/icons/css3.svg" alt="CSS3">
+                        <img src="asset/icons/firebase.svg" alt="Firebase">
+                        <img src="asset/icons/javascript.svg" alt="JavaScript">
+                    </div>
+                    <p class="card-text">A web app that book store mall reservations
+                        and skips the line.</p>
+                </div>
+            </div>
+
+            <!-- Lizzy -->
+            <div class="card project-card project" id="lizzy">
+                <img class="project-photo" src="asset/lizzy.png" alt="Lizzy">
+                <div class="card-body">
+                    <h5 class="card-title">Lizzy</h5>
+                    <div class="project-framework-list">
+                        <img src="asset/icons/javascript.svg" alt="JavaScript">
+                        <img src="asset/icons/discord.svg" alt="Discord">
+                    </div>
+                    <p class="card-text">A discord bot that manages your server's list. Create, edit
+                    and delete list/items together with your friends!</p>
+                </div>
+            </div>
+
+            <!-- Abalone-->
+            <div class="card project-card project" id="abalone">
+                <img class="project-photo" src="asset/abalone.png" alt="Abalone">
+                <div class="card-body">
+                    <h5 class="card-title">Abalone</h5>
+                    <div class="project-framework-list">
+                        <img src="asset/icons/python.svg" alt="Python">
+                    </div>
+                    <p class="card-text">An Abalone game to play with your friend or a
+                    AI-based bot opponent.</p>
+                </div>
+            </div>
+
+            <!-- Fin-->
+            <div class="card project-card project" id="fin">
+                <img class="project-photo" src="asset/fin.png" alt="Fin">
+                <div class="card-body">
+                    <h5 class="card-title">Fin</h5>
+                    <div class="project-framework-list">
+                        <img src="asset/icons/java.png" alt="Java">
+                        <img src="asset/icons/android.svg" alt="Android">
+                        <img src="asset/icons/firebase.svg" alt="Firebase">
+                    </div>
+                    <p class="card-text">A financial app that keep tracks of your asset -
+                    savings account, crypto, and stocks in one place.</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Website -->
+            <div class="card project-card project" id="portfolio-website">
+                <div class="card-body">
+                    <h5 class="card-title">Portfolio Website</h5>
+                    <div class="project-framework-list">
+                        <img src="asset/icons/html5_logo.svg" alt="HTML5">
+                        <img src="asset/icons/css3.svg" alt="CSS3">
+                        <img src="asset/icons/javascript.svg" alt="JavaScript">
+                    </div>
+                    <p class="card-text">What you are seeing at the moment :)</p>
+                </div>
+            </div>
+
+            <!-- Trulioo -->
+            <div class="card project-card experience" id="trulioo">
+                <div class="card-body">
+                    <h5 class="card-title">Trulioo</h5>
+                    <h6>Software Developer in Test & QA Engineer</h6>
+                    <p class="card-text">2021 - Coop Education</p>
+                    <div class="project-framework-list">
+                        <img src="asset/icons/react.svg" alt="React">
+                        <img src="asset/icons/typescript.svg" alt="TypeScript">
+                        <img src="asset/icons/c-sharp.svg" alt="C#">
+                        <img src="asset/icons/nodejs.svg" alt="NodeJS">
+                    </div>
+                    <p class="card-text">Wrote automation test script using C#</p>
+                    <p class="card-text">Worked on a react-based data-creation tool
+                    to speed up testing process.</p>
+                </div>
+            </div>
+
+            <!-- Trulioo -->
+            <div class="card project-card experience" id="mlc">
+                <img class="project-photo" src="asset/mlc.png" alt="Fin">
+                <div class="card-body">
+                    <h5 class="card-title">My Living City</h5>
+                    <h6>Full-Stack Developer</h6>
+                    <p class="card-text">2022 - Practicum Education</p>
+                    <div class="project-framework-list">
+                        <img src="asset/icons/react.svg" alt="React">
+                        <img src="asset/icons/typescript.svg" alt="TypeScript">
+                        <img src="asset/icons/nodejs.svg" alt="NodeJS">
+                        <img src="asset/icons/postgre.png" alt="Postgre">
+                    </div>
+                    <p class="card-text">Implemented different set of features such as user
+                        signup, post filtering, and follow/unfollow post
+                    </p>
+                </div>
             </div>
         </div>
-        <!-- Lizzy -->
-        <button type="button" class="collapsible">
-            Lizzy
-            <a class="github-project-link" href="https://github.com/Fanthoni/lizzy-discord-bot" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-        </button>
-        <div class="content">
-            <p>
-                Lizzy is a list-keeper bot. She will take care of your to-watch movies, games to play, and a server
-                other activities. With simple built-in commands group members can add new list, and add or remove items
-                to and from it. Lists can be accessed later without having to scroll up use the search function.
-            </p>
-            <p>
-                It was completed individually over the course of three days. Some technologies and concepts that I used
-                are Discord.js, NodeJS, JavaScript, and Object-Oriented Fundamentals.
-            </p>
-            <div class="project-gallery" id="lizzy-project-gallery">
-                <img src="./asset/lizzy.gif" alt="Lizzy on action" />
-            </div>
-        </div>
-        <!-- Disconvo -->
-        <button type="button" class="collapsible">
-            DisConvo
-            <a class="github-project-link" href="https://github.com/Fanthoni/disagreeing_convo_webapp" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-        </button>
-        <div class="content">
-            <p>DisConvo is a webapp where users have disagreeing conversations based on ideas they disagree with. It
-                allows the user to see from others' perspective and have ideas in mind about the opposing side.</p>
-            <p>
-                It was completed with a group of 4 over the course of 24-hours. Some technologies and I used to
-                contribute with this projects are: JavaScript, Node.Js, SocketIO, and HTML, CSS.
-            </p>
-            <div class="project-gallery" id="disconvo-project-gallery">
-                <img src="./asset/disconvo.gif" alt="Disconvo on action" />
-            </div>
-        </div>
+
     </div>
     <div id="contact-wrapper">
         <a href="https://www.linkedin.com/in/ferrelanthoni/" target="_blank"><img class="contact-icon"
-                src="./asset/linkedin.png" /></a>
-        <a href="https://github.com/Fanthoni" target="_blank"><img class="contact-icon" src="./asset/github.png" /></a>
+                src="asset/icons/linkedin.png" /></a>
+        <a href="https://github.com/Fanthoni" target="_blank"><img class="contact-icon" src="asset/icons/github.png" /></a>
         <a href="mailto: ferrelanthoni@gmail.com" target="_blank"><img class="contact-icon"
-                src="./asset/mail.png" /></a>
+                src="asset/icons/mail.png" /></a>
         <a href="https://www.instagram.com/ferrel.png" target="_blank"><img class="contact-icon"
-                src="./asset/instagram.png" /></a>
+                src="asset/icons/instagram.png" /></a>
         <a href="https://open.spotify.com/user/0fz9u9hxxslm5g88hu7x0897f?si=c8b248f0340941ef" target="_blank"><img
-                class="contact-icon" src="./asset/spotify.png" /></a>
+                class="contact-icon" src="asset/icons/spotify.png" /></a>
     </div>
     <div id="footer">
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>
     <script src="./js/responsive-background.js"></script>
     <script src="./js/copyright.js"></script>
-    <script src="./js/collapsible.js"></script>
+    <script src="./js/filter.js"></script>
 </body>

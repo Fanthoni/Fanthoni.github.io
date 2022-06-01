@@ -13,6 +13,15 @@ html{
 
 body {
     margin: 0 16px;
+
+    /* To override bootstrap white background colour  */
+    background-color: transparent; 
+    line-height: normal;
+}
+
+/* Override the default Bootstrap header styling */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
 }
 
 #navbar {
@@ -60,6 +69,7 @@ body {
     margin-top: 1.5rem;
 }
 
+/* Big background image */
 #landing-background {
     position: absolute;
     top: 0;
@@ -68,6 +78,7 @@ body {
     object-fit: cover;
 }
 
+/* Half-highlighted title */
 .highlight {
     display: inline-block;
     background-image: linear-gradient(rgb(197 210 218 / 97%), rgb(187 211 226 / 34%));
@@ -76,11 +87,13 @@ body {
     background-position: 0 88%;
 }
 
+/* Blue text */
 .blue-text {
     color: #4FA8DA;
     font-weight: bold;
 }
 
+/* Title of a page section */
 .section-title {
     font-size: 3.5rem;
     margin: 0;
@@ -89,10 +102,18 @@ body {
 #about-page {
     display: grid;
     grid-template-columns: 50% 50%;
+    max-width: 1500px;
+}
+
+@media screen and (min-width: 1700px) {
+    #about-page {
+        margin-left: 50%;
+        transform: translate(-50%, 0);
+    }
 }
 
 #profile-picture {
-    width: 200px;
+    width: 350px;
     display: block;
     margin: 0 auto;
 }
@@ -101,13 +122,99 @@ body {
     width: 80%;
 }
 
-#project-title {
+/* The Project Page Title */
+#filter-container {
+    margin-top: 1rem;
     margin-bottom: 3rem;
 }
 
-#projects-page, #about-page{
+#projects-page {
     margin-left: 5rem;
     margin-right: 5rem;
+    max-width: 1250px;
+}
+
+@media screen and (min-width: 2500px) {
+    #projects-page {
+        margin-left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
+
+.btn-primary:focus,
+.filter-btn {
+    background-color: transparent;
+    color: black;
+    border-color: #4FA8DA;
+    border-radius: 25px;
+    box-shadow: none;
+}
+
+.filter-btn:hover {
+    background-color: #4FA8DA;
+    color: white;
+}
+
+.btn-primary.active:focus,
+.btn-primary.active {
+    background-color: #4FA8DA;
+    color: white;
+    box-shadow: none;
+}     
+
+#project-cards-wrapper {
+    column-count: 4;
+}
+
+@media screen and (max-width: 1300px) {
+    #project-cards-wrapper {
+        column-count: 3;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #project-cards-wrapper {
+        column-count: 2;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #project-cards-wrapper {
+        column-count: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Card Project*/
+.project-card {
+    break-inside: avoid;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 17rem;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.project-card-inactive {
+    display: none;
+}
+
+/*Project Title in each card*/
+.card-title {
+    font-size: 2rem;
+}
+
+.project-framework-list {
+    margin: 0.5rem 0;
+}
+
+.project-framework-list > img{
+    width: 25px;
+}
+
+.project-photo {
+    width: 100%;
 }
 
 .collapsible {
@@ -125,44 +232,6 @@ body {
 .fa-github {
     color: #574949bd;
     cursor: pointer;   
-}
-
-.content {
-    padding: 0 18px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    background-color: #f1f1f100;
-}
-
-.active, .collapsible:hover {
-    background-color: #4fa7da42;
-    transition: 0.75s ease-in-out;
-}
-
-.collapsible:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-    color: white;
-    float: right;
-    margin-left: 5px;
-  }
-  
-.active:after {
-content: "\2796"; /* Unicode character for "minus" sign (-) */
-}
-
-.project-gallery {
-    text-align: center;
-}
-
-.metrOne-capture {
-    width: 150px
-}
-
-#lizzy-project-gallery > img, #disconvo-project-gallery > img {
-    max-width: 1000px;
-    width: 100%;
 }
 
 #contact-wrapper {
@@ -185,7 +254,7 @@ content: "\2796"; /* Unicode character for "minus" sign (-) */
     left: 0;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 850px) {
     body {
         margin: 0 32px;
     }

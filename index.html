@@ -24,8 +24,8 @@
         <div id="logo">FA</div>
         <div id="menu-list">
             <a href="#about-page">about</a>
+            <a href="#experience-page">experience</a>
             <a href="#projects-page">projects</a>
-            <a href="./asset/Ferrel_Resume.pdf" target="_blank">resume</a>
         </div>
     </div>
     <div class="page" id="landing-page">
@@ -35,176 +35,62 @@
         <h2 id="landing-name" style="margin-bottom: 0; font-size: 3rem">i'm Ferrel</h2>
         <h5 id="landing-welcome" style="margin: 0 0;">let me take you to my tech journey</h5>
         <h5 style="margin: 0 0;">. . .</h5>
-
+        <div id="landing-page-contact">
+            <a href="https://github.com/Fanthoni" target="_blank"><img src="./asset/github-2.png"/></a>
+            <a href="https://www.linkedin.com/in/ferrelanthoni/" target="_blank"><img src="./asset/linkedin-2.png"/></a>
+            <a href="https://instagram.com/ferrel.png" target="_blank"><img src="./asset/instagram-2.png"/></a>
+            <a href="https://open.spotify.com/user/0fz9u9hxxslm5g88hu7x0897f?si=f7568246820a484e" target="_blank"><img src="./asset/social.png"/></a>
+        </div>
     </div>
-    <div class="page" id="about-page">
+
+    <!-- Contain the about me -->
+    <div class="page radial-gradient" id="about-page">
         <div class="container-custom" id="profile-picture-container">
-            <img src="asset/profile2.png" id="profile-picture" alt="Profile Picture"/>
+            <img src="asset/profile3.png" id="profile-picture" alt="Profile Picture"/>
         </div>
         <div class="container-custom" id="about-text-container">
             <h1 class="highlight section-title">about</h1>
             <p>
-                Halo! My name is <span class="blue-text">Ferrel Anthoni</span>.
-                My friend call me <span class="blue-text">Toni</span>. I want to
-                thank you for hanging out with me on my little tech journey.
+                Back in 2017, I decided to build my first programming project, which 
+                was a replication of a dinosaur game from Google Chrome. Fast forward to 
+                today, I’ve had the privilege to study Computer Science at <span class="bold-text">British Columbia 
+                Institute of Technology </span> and build several projects.
             </p>
             <p>
-                A little about myself: I was born in <span class="blue-text">Indonesia</span> - a beatiful nation
-                with thousands of islands. Currently I am based in <span class="blue-text">Vancouver, BC</span> - pursuing
-                Computer Systems Technology diploma at the <span class="blue-text">British Columbia Institute of
-                    Technology</span>.
+                I’m currently a <span class="bold-text">Software QA Automation Engineer at Trulioo</span>. 
+                In my free I’ve been building several projects that covers broad technologies 
+                which I learn either by myself or from my my vocation.
             </p>
             <p>
-                Building technology that is right for the future has been a motivation that drives 
-                me every day, whether it is from day-to-day technology or one that plays an integral 
-                part in our lives and society. I am fascinated to learn more about the technology 
-                and its real-world application and am very excited to be a part of this tech 
-                adventure of the twenty-first century.
+                Let me share them with you!
             </p>
-            
-
         </div>
-        <!-- Contain the about me -->
     </div>
+
+    <!-- Contains list of experiences -->
+    <div class="page" id="experience-page">
+        <h1 class="highlight section-title" >experience</h1>
+        <div id="experience-content-root"></div>
+        <a href="./asset/Ferrel_Resume.pdf" target="_blank"id="resume-hyperlink">VIEW RESUME↗</a>
+    </div>
+
+
+    <!-- Contains list of projects -->
     <div class="page" id="projects-page">
-        <h1 class="highlight section-title" >projects . experience</h1>
-        <div id="filter-container">
-            <button type="button" class="btn btn-primary filter-btn" id="project-filter-button" onclick=handleFilter(this)>project</button>
-            <button type="button" class="btn btn-primary filter-btn" id="experience-filter-button" onclick=handleFilter(this)>experience</button>
-        </div>
-
-        <!-- Contains list of project with expandable and collapsable view -->
-        <div id="project-cards-wrapper">
-
-            <!-- TODO: Change the button forwarding-->
-            <!-- MetrOne-->
-            <div class="card project-card project" id="metrone">
-                <img class="project-photo" src="asset/metrone.png" alt="MetrOne">
-                <div class="card-body">
-                    <h5 class="card-title">MetrOne</h5>
-                    <div class="project-framework-list">
-                        <img src="asset/icons/html5_logo.svg" alt="HTML5">
-                        <img src="asset/icons/css3.svg" alt="CSS3">
-                        <img src="asset/icons/firebase.svg" alt="Firebase">
-                        <img src="asset/icons/javascript.svg" alt="JavaScript">
-                    </div>
-                    <p class="card-text">A web app that book store mall reservations
-                        and skips the line.</p>
-                </div>
-            </div>
-
-            <!-- Lizzy -->
-            <div class="card project-card project" id="lizzy">
-                <img class="project-photo" src="asset/lizzy.png" alt="Lizzy">
-                <div class="card-body">
-                    <h5 class="card-title">Lizzy</h5>
-                    <div class="project-framework-list">
-                        <img src="asset/icons/javascript.svg" alt="JavaScript">
-                        <img src="asset/icons/discord.svg" alt="Discord">
-                    </div>
-                    <p class="card-text">A discord bot that manages your server's list. Create, edit
-                    and delete list/items together with your friends!</p>
-                </div>
-            </div>
-
-            <!-- Abalone-->
-            <div class="card project-card project" id="abalone">
-                <img class="project-photo" src="asset/abalone.png" alt="Abalone">
-                <div class="card-body">
-                    <h5 class="card-title">Abalone</h5>
-                    <div class="project-framework-list">
-                        <img src="asset/icons/python.svg" alt="Python">
-                    </div>
-                    <p class="card-text">An Abalone game to play with your friend or a
-                    AI-based bot opponent.</p>
-                </div>
-            </div>
-
-            <!-- Fin-->
-            <div class="card project-card project" id="fin">
-                <img class="project-photo" src="asset/fin.png" alt="Fin">
-                <div class="card-body">
-                    <h5 class="card-title">Fin</h5>
-                    <div class="project-framework-list">
-                        <img src="asset/icons/java.png" alt="Java">
-                        <img src="asset/icons/android.svg" alt="Android">
-                        <img src="asset/icons/firebase.svg" alt="Firebase">
-                    </div>
-                    <p class="card-text">A financial app that keep tracks of your asset -
-                    savings account, crypto, and stocks in one place.</p>
-                </div>
-            </div>
-
-            <!-- Portfolio Website -->
-            <div class="card project-card project" id="portfolio-website">
-                <div class="card-body">
-                    <h5 class="card-title">Portfolio Website</h5>
-                    <div class="project-framework-list">
-                        <img src="asset/icons/html5_logo.svg" alt="HTML5">
-                        <img src="asset/icons/css3.svg" alt="CSS3">
-                        <img src="asset/icons/javascript.svg" alt="JavaScript">
-                    </div>
-                    <p class="card-text">What you are seeing at the moment :)</p>
-                </div>
-            </div>
-
-            <!-- Trulioo -->
-            <div class="card project-card experience" id="trulioo">
-                <div class="card-body">
-                    <h5 class="card-title">Trulioo</h5>
-                    <h6>Software Developer in Test & QA Engineer</h6>
-                    <p class="card-text">2021 - Coop Education</p>
-                    <div class="project-framework-list">
-                        <img src="asset/icons/react.svg" alt="React">
-                        <img src="asset/icons/typescript.svg" alt="TypeScript">
-                        <img src="asset/icons/c-sharp.svg" alt="C#">
-                        <img src="asset/icons/nodejs.svg" alt="NodeJS">
-                    </div>
-                    <p class="card-text">Wrote automation test script using C#</p>
-                    <p class="card-text">Worked on a react-based data-creation tool
-                    to speed up testing process.</p>
-                </div>
-            </div>
-
-            <!-- Trulioo -->
-            <div class="card project-card experience" id="mlc">
-                <img class="project-photo" src="asset/MLC.png" alt="MLC">
-                <div class="card-body">
-                    <h5 class="card-title">My Living City</h5>
-                    <h6>Full-Stack Developer</h6>
-                    <p class="card-text">2022 - Practicum Education</p>
-                    <div class="project-framework-list">
-                        <img src="asset/icons/react.svg" alt="React">
-                        <img src="asset/icons/typescript.svg" alt="TypeScript">
-                        <img src="asset/icons/nodejs.svg" alt="NodeJS">
-                        <img src="asset/icons/postgre.png" alt="Postgre">
-                    </div>
-                    <p class="card-text">Implemented different set of features such as user
-                        signup, post filtering, and follow/unfollow post
-                    </p>
-                </div>
-            </div>
-        </div>
-
+        <h1 class="highlight section-title" >projects</h1>
+        <div id="projects-content-root"></div>
     </div>
-    <div id="contact-wrapper">
-        <a href="https://www.linkedin.com/in/ferrelanthoni/" target="_blank"><img class="contact-icon"
-                src="asset/icons/linkedin.png" /></a>
-        <a href="https://github.com/Fanthoni" target="_blank"><img class="contact-icon" src="asset/icons/github.png" /></a>
-        <a href="mailto: ferrelanthoni@gmail.com" target="_blank"><img class="contact-icon"
-                src="asset/icons/mail.png" /></a>
-        <a href="https://www.instagram.com/ferrel.png" target="_blank"><img class="contact-icon"
-                src="asset/icons/instagram.png" /></a>
-        <a href="https://open.spotify.com/user/0fz9u9hxxslm5g88hu7x0897f?si=c8b248f0340941ef" target="_blank"><img
-                class="contact-icon" src="asset/icons/spotify.png" /></a>
-    </div>
+
+    <!-- Footer -->
     <div id="footer">
+        designed and made with ❤ by Ferrel Anthoni © 2023
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>
     <script src="./js/responsive-background.js"></script>
-    <script src="./js/copyright.js"></script>
-    <script src="./js/filter.js"></script>
+    <script type="module"  src="./js/experienceContent.js"></script>
+    <script type="module"  src="./js/projectsContent.js"></script>
+    <script type="module"  src="./js/mouseHoverEffect.js"></script>
 </body>

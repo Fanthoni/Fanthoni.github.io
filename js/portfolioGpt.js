@@ -12,6 +12,7 @@ async function askResume() {
   }
 
   try {
+    document.getElementById("send-question").className = "fas fa-hourglass";
     const response = await fetch(
       "https://portfolio-gpt-c5c8288ee3a6.herokuapp.com/query",
       {
@@ -24,10 +25,22 @@ async function askResume() {
       }
     );
     const data = await response.json();
-    document.getElementById("query-answer-container").innerText = "";
-    typeWriter(document.getElementById("query-answer-container"), data.answer);
-    document.getElementById("query-answer-container").className =
-      "answer-present";
+
+    if (data.answer) {
+      document.getElementById("send-question").className = "fas fa-hourglass";
+      document.getElementById("query-answer-container").innerText = "";
+      typeWriter(
+        document.getElementById("query-answer-container"),
+        data.answer
+      );
+      document.getElementById("query-answer-container").className =
+        "answer-present";
+      setTimeout(() => {
+        document.getElementById("send-question").className =
+          "fa fa-paper-plane";
+      }, data.answer.length * 25);
+    }
+
     return;
   } catch (error) {
     // Handle any errors that occur during the fetch

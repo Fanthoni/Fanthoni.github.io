@@ -48,6 +48,12 @@ async function askResume() {
   }
 }
 
+async function askResumeViaEnter(event) {
+  if (event.key === "Enter") {
+    await askResume();
+  }
+}
+
 function getRandomQuestion() {
   const questions = [
     "Who is Ferrel?",

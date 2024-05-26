@@ -48,7 +48,7 @@
         <h5 style="margin: 0 0;">. . .</h5>
         <div id="resume-query-container">
             <div id="search-container">
-                <input type="text" id="resume-query-textbox" placeholder="ask me anything ..."/>
+                <input type="text" id="resume-query-textbox" placeholder="ask me anything ..." onkeypress="askResumeViaEnter(event)"/>
                 <div id="resume-query-action-container">
                     <i class="fa fa-random" aria-hidden="true" id="question-randomizer" onclick="getRandomQuestion()"></i>
                     <i class="fa fa-paper-plane" aria-hidden="true" id="send-question" onclick="askResume()"></i>

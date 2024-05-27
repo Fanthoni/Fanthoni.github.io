@@ -82,6 +82,36 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     align-items: center;
 
+    #landing-greeting {
+        font-size: 6rem;
+        margin-bottom: 1rem;
+    }
+
+    #landing-name {
+        margin-bottom: 0;
+        font-size: 4rem;
+    }
+
+    #landing-welcome {
+        margin: 0 0;
+        font-size: 0.9rem;
+    }
+
+    @media screen and (max-width: 425px) {
+        #landing-greeting {
+            font-size: 3rem;
+        }
+
+        #landing-name {
+            font-size: 3rem;
+        }
+
+        #landing-welcome {
+            font-size: 0.7rem;
+        }
+        
+    }
+
     #landing-page-contact {
         display: flex;
         flex-direction: row;
@@ -114,6 +144,10 @@ h1, h2, h3, h4, h5, h6 {
     padding: 4px 12px;
     max-height: 500px;
     padding: 1em;
+
+    @media screen and (max-width: 425px){
+        width: 100%;
+    }
 
 
     #search-container {
@@ -386,7 +420,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     #menu-list > a {
-        margin: auto 0.3rem;
+        margin: 0 0.3rem;
     }
 
     #landing-page {

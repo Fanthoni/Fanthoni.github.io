@@ -1,3 +1,4 @@
+// Via send button click
 async function askResume() {
   const query = document.getElementById("resume-query-textbox").value;
 
@@ -48,16 +49,17 @@ async function askResume() {
   }
 }
 
+// Via enter key press
 async function askResumeViaEnter(event) {
   if (event.key === "Enter") {
     await askResume();
   }
 }
 
+// Get random questions
 function getRandomQuestion() {
   const questions = [
     "Who is Ferrel?",
-    "What is Ferrel doing at the moment?",
     "How many years of JS experience does Ferrel have?",
     "What kind of technologies does Ferrel work with?",
     "What's Ferrel's current job?",

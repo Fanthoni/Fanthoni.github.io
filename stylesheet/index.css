@@ -299,6 +299,15 @@ h1, h2, h3, h4, h5, h6 {
         width: 500px;
     }
 
+    .project-title {
+        color: #FFFF !important;
+        text-decoration: none;
+
+        a:hover {
+            cursor: pointer;
+        }
+    }
+
     .experience-title, .project-title{
         margin-bottom: 1rem;
     }
@@ -368,7 +377,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Card on focus */
 #experience-content-root:hover > div:hover, #projects-content-root:hover > div:hover{
-    cursor: pointer;
     background-color:rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     box-shadow: -2px -2px 2px rgba(113, 110, 110, 0.346);

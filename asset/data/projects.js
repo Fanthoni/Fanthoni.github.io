@@ -38,7 +38,7 @@ const project = [
     projectName: "Portfolio Website",
     description: "The current space that you are in",
     year: "2021 - present",
-    tags: ["HTML", "JS", "Javascript", "Firebase"],
+    tags: ["HTML", "JS", "Javascript", "Firebase", "GeminiAPI", "Heroku"],
     links: ["https://ferrelanthoni.com"],
     imageDir: "portfolio.png",
   },

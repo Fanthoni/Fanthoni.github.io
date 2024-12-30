@@ -1,3 +1,15 @@
+GPT_URL = "https://portfolio-gpt-c5c8288ee3a6.herokuapp.com";
+
+// Wake up the server
+window.onload = async function wakeUpServer() {
+  try {
+    const response = await fetch(GPT_URL);
+    return;
+  } catch (error) {
+    console.error("Error:", error);
+  }
+};
+
 // Via send button click
 async function askResume() {
   const query = document.getElementById("resume-query-textbox").value;
@@ -14,17 +26,14 @@ async function askResume() {
 
   try {
     document.getElementById("send-question").className = "fas fa-hourglass";
-    const response = await fetch(
-      "https://portfolio-gpt-c5c8288ee3a6.herokuapp.com/query",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "*/*",
-        },
-        body: JSON.stringify({ query: query }),
-      }
-    );
+    const response = await fetch(`${GPT_URL}/query`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "*/*",
+      },
+      body: JSON.stringify({ query: query }),
+    });
     const data = await response.json();
 
     if (data.answer) {

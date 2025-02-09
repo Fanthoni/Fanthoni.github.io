@@ -1,4 +1,4 @@
-GPT_URL = "https://portfolio-gpt-c5c8288ee3a6.herokuapp.com";
+GPT_URL = "https://fanthoni-portfolio-gpt.up.railway.app";
 
 // Wake up the server
 window.onload = async function wakeUpServer() {
